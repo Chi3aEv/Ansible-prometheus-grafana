@@ -13,7 +13,9 @@ Terraform -->> For infrastructure Management --> BEfore logging to server
 
 5. wrote some playbook grafana.yml , node_exporter+prometheus.yml and inventory.ini and also alert_manager.yml 
 
-6. RUN them 
+6. RUN them using ansible-playbook alert_manager.yml -i inventory.ini and all others
+
+7. After this inside prometheus server files changes in /etc/alertmanager/alertmanager.yml and also inside 
 
 Promethues  <IP>:9090
 Node exporter <IP>:9100
