@@ -1,0 +1,15 @@
+---
+ - hosts: localhost
+   gather_facts: no
+   tasks: 
+    - name: Create new directory in /tmp/
+      file: 
+        path: /tmp/ansible_directory
+        state: directory
+        mode: 0755
+      
+    - name: create new file under the /tmp/ansible_directory
+      file:
+        path: /tmp/ansible_directory/file.txt
+        state: touch
+        mode: 0644
