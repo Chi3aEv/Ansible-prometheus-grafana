@@ -1,0 +1,11 @@
+---
+ - hosts: prometheus-server
+   gather_facts: no
+   tasks:
+    - name: apt update
+      shell:  sudo apt update -y
+    - name: Installation of Promethues server on Ubuntu latest 
+      apt: 
+        name: prometheus
+        state: present
+      become: yes
